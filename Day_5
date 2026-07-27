@@ -1,0 +1,165 @@
+# 1. Longest Consecutive Consonant Sequence
+# Definition: A consonant sequence is a group of consecutive consonants without any vowels in
+# between.
+# Task: Read a string and print the length of the longest consecutive consonant sequence.
+# Example Input:
+# strength
+# Example Output:
+# 4
+
+string = input("Enter string: ")
+count = 0
+max_count = 0
+for i in string:
+    if i not in "aeiouAEIOU":
+        count += 1
+        if count > max_count:
+            max_count = count
+    else:
+        count = 0
+print(max_count)
+
+# 2. Alternate Case Check
+# Definition: A string has alternating case if every adjacent pair of letters has different cases.
+# Task: Read a string containing only alphabets and determine whether its letters alternate between
+# uppercase and lowercase.
+# Example Input:
+# pYtHoN
+# Example Output:
+# Alternating
+
+string = input("Enter String: ")
+
+for i in range(len(string) - 1):
+    if (string[i] >= 'A' and string[i] <= 'Z' and
+        string[i + 1] >= 'A' and string[i + 1] <= 'Z') or \
+       (string[i] >= 'a' and string[i] <= 'z' and
+        string[i + 1] >= 'a' and string[i + 1] <= 'z'):
+        print("Not Alternating")
+        break
+else:
+    print("Alternating")
+
+
+# 3. Most Frequent Character
+# Definition: The most frequent character is the one that appears the highest number of times.
+# Task: Read a string and print the character with the highest frequency. If there is a tie, print the one
+# that appears first.
+# Example Input:
+# mississippi
+# Example Output:
+# i
+
+string = input("Enter String: ")
+max_count = 0
+max_char = ""
+for i in string:
+    count = 0
+    for j in string:
+        if i == j:
+            count += 1
+    if count > max_count:
+        max_count = count
+        max_char = i
+print(max_char)
+
+# 4. Count Words Starting with a Vowel
+# Definition: A word starts with a vowel if its first letter is A, E, I, O, or U.
+# Task: Read a sentence and count how many words begin with a vowel.
+# Example Input:
+# Apple is an orange
+# Example Output:
+# 4
+
+string = input("Enter String: ")
+count = 0
+if string[0] in "AEIOUaeiou":
+    count += 1
+for i in range(1, len(string)):
+    if string[i - 1] == ' ' and string[i] in "AEIOUaeiou":
+        count += 1
+print(count)
+
+
+# 5. Remove Consecutive Duplicates
+# Definition: If the same character appears repeatedly next to itself, keep only one occurrence.
+# Task: Read a string and print the modified string.
+# Example Input:
+# aaabbbccaadd
+# Example Output:
+# abcad
+string = input("Enter String: ")
+result = ""
+prev = ""
+for ch in string:
+    if ch != prev:
+        result += ch
+        prev = ch
+print(result)
+
+
+# 6. Longest Word
+# Definition: The longest word is the word with the maximum number of characters.
+# Task: Read a sentence and print the longest word. If multiple words have the same length, print the
+# first one.
+# Example Input:
+# Python programming is interesting
+# Example Output:
+# programming
+
+sen = input("Enter sentence: ") + " "
+count = 0
+max_count = 0
+word = ""
+longest = ""
+for ch in sen:
+    if ch != ' ':
+        count += 1
+        word += ch
+    else:
+        if count > max_count:
+            max_count = count
+            longest = word
+        count = 0
+        word = ""
+print(longest)
+
+# 7. Count Character Changes
+# Definition: A character change occurs when the current character differs from the previous one.
+# Task: Read a string and count how many character changes occur.
+# Example Input:
+# aaabbccdaa
+# Example Output:
+# 4
+
+string = input("Enter String: ")
+count = 0
+for i in range(1, len(string)):
+    if string[i] != string[i - 1]:
+        count+=1
+print(count)
+
+# 9. Largest Alphabetical Word
+# Definition: The largest alphabetical word is the word that comes last in dictionary order.
+# Task: Read a sentence and print the largest alphabetical word.
+# Example Input:
+# apple mango zebra orange
+# Example Output:
+# zebra
+
+sen = input("Enter sentence: ")
+current_word = ""
+largest_word = ""
+for char in sen:
+    if char != " ":
+        current_word = current_word + char
+    else:
+        if largest_word == "" or current_word > largest_word:
+            largest_word = current_word
+
+        current_word = ""
+
+if largest_word == "" or current_word > largest_word:
+    largest_word = current_word
+
+print(largest_word)
