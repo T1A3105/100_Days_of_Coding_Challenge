@@ -1,0 +1,158 @@
+#1. Remove All Spaces
+# str1="Python Programming"
+# def remove_spaces(str1):
+#     result=''
+#     for ch in str1:
+#         if ch!=' ':
+#             result+=ch
+#     print(result)
+# remove_spaces(str1)
+
+
+#2. camelCase to snake_case
+# str1="studentName"
+# def convert_snakecase(str1):
+#     result=''
+#     for ch in str1:
+       
+#         if 'A'<=ch<="Z":
+#             result+= "_"+chr(ord(ch)+32)
+#         else:
+#             result+=ch
+#     print(result)
+# convert_snakecase(str1)
+
+
+#3. snake_case to camelCase
+# str1="student_name"
+# def camel_case(str1):
+#     result=""
+#     capitalize=False
+#     for ch in str1:
+#         if ch=="_":
+#             capitalize=True
+#         elif capitalize:
+#             result+=chr(ord(ch)-32)
+#             capitalize=False
+#         else:
+#             result+=ch
+#     print(result)
+# camel_case(str1)
+
+
+
+#4. Uppercase to Lowercase
+# str1="HELLO WORLD"
+# def lower_case(str1):
+#     result=''
+#     for ch in str1:
+#         if ch==' ':
+#             result+=' '
+#         else:
+#             result+=chr(ord(ch)+32)
+#     print(result)
+# lower_case(str1)
+
+
+
+#5. Lowercase to Uppercase
+# str1="python"
+# def upper_case(str1):
+#     result=''
+#     for ch in str1:
+#         result+=chr(ord(ch)-32)
+#     print(result)
+# upper_case(str1)
+        
+
+
+# #6. Reverse Every Word
+# str1="Learn Python"
+# def reverse(str1):
+#     result=''
+#     rev=''
+#     for ch in str1:
+#         if ch!=' ':
+#             rev=ch+rev
+#         else:
+#             result+=rev+' '
+#             rev=''
+#     result+=rev
+#     print(result)
+    
+   
+# reverse(str1)
+
+
+
+#7. Remove Duplicate Characters
+# str1="programming"
+# def dup_char(str1):
+#     result=''
+#     for ch in str1:
+#         count=0
+#         for i in str1:
+#             if ch==i:
+#                 count+=1
+#                 if count<=1:
+#                     if ch in result:
+#                         continue
+#                     result+=ch
+#     print(result)
+# dup_char(str1)
+
+
+
+#8. Count Vowels and Consonants
+# str1="Education"
+# def count1(str1):
+#     vowel_count=0
+#     cons_count=0
+#     for ch in str1:
+#         if ch in 'aeiouAEIOU':
+#             vowel_count+=1
+#         else:
+#             cons_count+=1
+#     print(f'Vowels : {vowel_count}')
+#     print(f'Consonants : {cons_count}')
+# count1(str1)
+
+
+
+#9. Replace Multiple Spaces
+# str1="Python  is  fun"
+# def replace(str1):
+#     result=''
+#     prev_space=False
+#     for ch in str1:
+#         if ch==' ':
+#             if prev_space==False:
+#                 result+=ch
+#                 prev_space=True
+#         else:
+#             result+=ch
+#             prev_space=False
+#     print(result)
+# replace(str1)
+
+
+
+# 10. Capitalize Every Word
+# str1="welcome to python"
+# def capitalize(str1):
+#     result=''
+#     capital=True
+#     for ch in str1:
+#         if capital and 'a'<=ch<='z':
+#             result+=chr(ord(ch)-32)
+#             capital=False
+#         else:
+#             result+=ch
+#         if ch==' ':
+#             capital=True
+       
+#     print(result)
+# capitalize(str1)
+
+
+
